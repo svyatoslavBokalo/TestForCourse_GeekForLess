@@ -1,0 +1,35 @@
+﻿@* @model List<TestForCourse_Bokalo.Models.Catalog>
+ *@
+@model TestForCourse_Bokalo.Models.Catalog
+
+<h2>"Folder" - @Model.NameFolder</h2>
+
+<ul>
+    @foreach (var subCatalog in Model.SubCatalogs)
+    {
+        <li><a asp-action="Show" asp-route-id="@subCatalog.Id">@subCatalog.NameFolder</a></li>
+    }
+</ul>
+
+
+@* <h1>Catalogs</h1>
+
+<table class="'table'">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>NameFolder</th>
+            <th>ParentId</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Catalog catalog in Model)
+        {
+            <tr>
+                <th>catalog.Id</th>
+                <th>catalog.NameFolder</th>
+                <th>catalog.ParentId</th>
+            </tr>
+        }
+    </tbody>
+</table> *@
